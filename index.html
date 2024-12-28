@@ -3,60 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Haven</title>
+    <title>Anime Galaxy</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header class="header">
-        <h1>Anime Haven</h1>
+        <h1>Anime Galaxy</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#catalog">Catalog</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="top-anime.html">Top Anime</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Welcome to Anime Haven</h2>
-                <p>Your one-stop destination for all anime lovers.</p>
-                <button onclick="scrollToCatalog()">Browse Catalog</button>
+
+    <div class="hero">
+        <h2>Discover Amazing Anime</h2>
+        <p>Your portal to the latest and greatest in anime culture!</p>
+        <button onclick="window.location.href='#catalog'">Explore Now</button>
+    </div>
+
+    <section class="search-section">
+        <input type="text" id="search-bar" placeholder="Search for anime...">
+        <select id="filter">
+            <option value="all">All Genres</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="romance">Romance</option>
+            <option value="fantasy">Fantasy</option>
+        </select>
+        <button onclick="searchAnime()">Search</button>
+    </section>
+
+    <section id="catalog" class="catalog">
+        <h2>Catalog</h2>
+        <div class="anime-list">
+            <div class="anime-item" onclick="openDetails('naruto')">
+                <img src="https://via.placeholder.com/200x300" alt="Naruto">
+                <h3>Naruto</h3>
+                <p>Action, Adventure</p>
             </div>
-        </section>
-        
-        <!-- Search and Filter -->
-        <section id="search" class="search-section">
-            <input type="text" id="search-bar" placeholder="Search for an anime..." oninput="searchAnime()">
-            <select id="filter" onchange="filterAnime()">
-                <option value="all">All Genres</option>
-                <option value="action">Action</option>
-                <option value="adventure">Adventure</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="drama">Drama</option>
-            </select>
-        </section>
-        
-        <!-- Catalog -->
-        <section id="catalog" class="catalog">
-            <h2>Anime Catalog</h2>
-            <div id="anime-list" class="anime-list"></div>
-        </section>
-        
-        <!-- About Section -->
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>Anime Haven is a platform created by anime fans, for anime fans. Dive into our collection and enjoy!</p>
-        </section>
-    </main>
-    
+            <div class="anime-item" onclick="openDetails('one-piece')">
+                <img src="https://via.placeholder.com/200x300" alt="One Piece">
+                <h3>One Piece</h3>
+                <p>Adventure, Comedy</p>
+            </div>
+            <div class="anime-item" onclick="openDetails('demon-slayer')">
+                <img src="https://via.placeholder.com/200x300" alt="Demon Slayer">
+                <h3>Demon Slayer</h3>
+                <p>Action, Fantasy</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="favorites-section">
+        <h2>Your Watchlist</h2>
+        <p>Login to save your favorite anime to your watchlist!</p>
+        <button onclick="window.location.href='login.html'">Login</button>
+    </section>
+
+    <section class="about">
+        <h2>About Anime Galaxy</h2>
+        <p>Welcome to Anime Galaxy, your ultimate destination for all things anime. From classics to the latest releases, we have it all!</p>
+    </section>
+
     <footer>
-        <p>© 2024 Anime Haven. All rights reserved.</p>
+        <p>&copy; 2024 Anime Galaxy. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
