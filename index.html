@@ -15,11 +15,13 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#catalog">Catalog</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h2>Welcome to Anime Haven</h2>
@@ -28,11 +30,25 @@
             </div>
         </section>
         
+        <!-- Search and Filter -->
+        <section id="search" class="search-section">
+            <input type="text" id="search-bar" placeholder="Search for an anime..." oninput="searchAnime()">
+            <select id="filter" onchange="filterAnime()">
+                <option value="all">All Genres</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="drama">Drama</option>
+            </select>
+        </section>
+        
+        <!-- Catalog -->
         <section id="catalog" class="catalog">
             <h2>Anime Catalog</h2>
             <div id="anime-list" class="anime-list"></div>
         </section>
         
+        <!-- About Section -->
         <section id="about" class="about">
             <h2>About Us</h2>
             <p>Anime Haven is a platform created by anime fans, for anime fans. Dive into our collection and enjoy!</p>
