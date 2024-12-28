@@ -11,71 +11,94 @@
         <h1>Anime Galaxy</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="top-anime.html">Top Anime</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
-        <button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
     </header>
 
-    <div class="hero">
-        <h2>Discover Amazing Anime</h2>
-        <p>Your portal to the latest and greatest in anime culture!</p>
-        <button onclick="window.location.href='#catalog'">Explore Now</button>
-    </div>
-
-    <section class="search-section">
-        <input type="text" id="search-bar" placeholder="Search for anime..." oninput="showSuggestions(this.value)">
-        <div id="suggestions"></div>
-        <select id="filter">
-            <option value="all">All Genres</option>
-            <option value="action">Action</option>
-            <option value="comedy">Comedy</option>
-            <option value="romance">Romance</option>
-            <option value="fantasy">Fantasy</option>
-        </select>
-        <button onclick="searchAnime()">Search</button>
-    </section>
-
-    <section id="catalog" class="catalog">
-        <h2>Catalog</h2>
+    <main>
+        <h2>Featured Anime</h2>
         <div class="anime-list">
-            <div class="anime-item" onclick="openDetails('naruto')">
-                <img src="https://via.placeholder.com/200x300" alt="Naruto">
-                <h3>Naruto</h3>
-                <p>Action, Adventure</p>
+            <!-- Example Anime Entries -->
+            <div class="anime-item">
+                <a href="anime-details.html?id=1">
+                    <img src="https://via.placeholder.com/200x300?text=Naruto" alt="Naruto">
+                    <h3>Naruto</h3>
+                    <p>Rating: 9.3/10</p>
+                </a>
             </div>
-            <div class="anime-item" onclick="openDetails('one-piece')">
-                <img src="https://via.placeholder.com/200x300" alt="One Piece">
-                <h3>One Piece</h3>
-                <p>Adventure, Comedy</p>
+            <div class="anime-item">
+                <a href="anime-details.html?id=2">
+                    <img src="https://via.placeholder.com/200x300?text=Attack+on+Titan" alt="Attack on Titan">
+                    <h3>Attack on Titan</h3>
+                    <p>Rating: 9.7/10</p>
+                </a>
             </div>
-            <div class="anime-item" onclick="openDetails('demon-slayer')">
-                <img src="https://via.placeholder.com/200x300" alt="Demon Slayer">
-                <h3>Demon Slayer</h3>
-                <p>Action, Fantasy</p>
+            <div class="anime-item">
+                <a href="anime-details.html?id=3">
+                    <img src="https://via.placeholder.com/200x300?text=One+Piece" alt="One Piece">
+                    <h3>One Piece</h3>
+                    <p>Rating: 9.5/10</p>
+                </a>
+            </div>
+            <!-- More Anime Entries -->
+            <div class="anime-item">
+                <a href="anime-details.html?id=4">
+                    <img src="https://via.placeholder.com/200x300?text=Dragon+Ball+Z" alt="Dragon Ball Z">
+                    <h3>Dragon Ball Z</h3>
+                    <p>Rating: 9.2/10</p>
+                </a>
+            </div>
+            <div class="anime-item">
+                <a href="anime-details.html?id=5">
+                    <img src="https://via.placeholder.com/200x300?text=Demon+Slayer" alt="Demon Slayer">
+                    <h3>Demon Slayer</h3>
+                    <p>Rating: 9.6/10</p>
+                </a>
+            </div>
+            <div class="anime-item">
+                <a href="anime-details.html?id=6">
+                    <img src="https://via.placeholder.com/200x300?text=My+Hero+Academia" alt="My Hero Academia">
+                    <h3>My Hero Academia</h3>
+                    <p>Rating: 8.8/10</p>
+                </a>
+            </div>
+            <div class="anime-item">
+                <a href="anime-details.html?id=7">
+                    <img src="https://via.placeholder.com/200x300?text=Tokyo+Revengers" alt="Tokyo Revengers">
+                    <h3>Tokyo Revengers</h3>
+                    <p>Rating: 9.4/10</p>
+                </a>
+            </div>
+            <div class="anime-item">
+                <a href="anime-details.html?id=8">
+                    <img src="https://via.placeholder.com/200x300?text=Fullmetal+Alchemist" alt="Fullmetal Alchemist">
+                    <h3>Fullmetal Alchemist</h3>
+                    <p>Rating: 9.9/10</p>
+                </a>
+            </div>
+            <div class="anime-item">
+                <a href="anime-details.html?id=9">
+                    <img src="https://via.placeholder.com/200x300?text=Bleach" alt="Bleach">
+                    <h3>Bleach</h3>
+                    <p>Rating: 8.7/10</p>
+                </a>
+            </div>
+            <div class="anime-item">
+                <a href="anime-details.html?id=10">
+                    <img src="https://via.placeholder.com/200x300?text=Jujutsu+Kaisen" alt="Jujutsu Kaisen">
+                    <h3>Jujutsu Kaisen</h3>
+                    <p>Rating: 9.4/10</p>
+                </a>
             </div>
         </div>
-    </section>
-
-    <section class="favorites-section">
-        <h2>Your Watchlist</h2>
-        <p>Login to save your favorite anime to your watchlist!</p>
-        <button onclick="window.location.href='login.html'">Login</button>
-    </section>
-
-    <section class="about">
-        <h2>About Anime Galaxy</h2>
-        <p>Welcome to Anime Galaxy, your ultimate destination for all things anime. From classics to the latest releases, we have it all!</p>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Anime Galaxy. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
