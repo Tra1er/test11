@@ -18,6 +18,7 @@
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
     </header>
 
     <div class="hero">
@@ -27,7 +28,8 @@
     </div>
 
     <section class="search-section">
-        <input type="text" id="search-bar" placeholder="Search for anime...">
+        <input type="text" id="search-bar" placeholder="Search for anime..." oninput="showSuggestions(this.value)">
+        <div id="suggestions"></div>
         <select id="filter">
             <option value="all">All Genres</option>
             <option value="action">Action</option>
